@@ -1,0 +1,7 @@
+node_modules
+src
+.idea
+.github
+svg-template.js
+svgo-config.json
+svgr-config.json
