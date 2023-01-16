@@ -14,6 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Build icons
+        run: yarn icons:create
+
       - name: Set git user for commit new version
         run: |
           git config --global user.name "Pohodnik NPM Publisher"
