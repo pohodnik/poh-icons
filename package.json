@@ -1,6 +1,6 @@
 {
   "name": "@pohodnik/icons",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Icons for pohodnik webasites",
   "main": "svg/index.js",
   "repository": "git@github.com:pohodnik/poh-icons.git",
