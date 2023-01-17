@@ -14,6 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: yarn
+        run: yarn ci
+
       - name: Build icons
         run: yarn icons:create
 
