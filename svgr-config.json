@@ -1,5 +1,5 @@
 {
-  "typescript": true,
+  "typescript": false,
   "removeViewBox": false,
   "replaceAttrValues": {
     "white": "{props.color || `#FFFFFF`}",
