@@ -14,14 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: yarn
-        run: yarn
-
       - name: Build icons
         run: yarn icons:create
-
-      - name: Rename icons
-        run: yarn build:rename
 
       - name: Set git user for commit new version
         run: |

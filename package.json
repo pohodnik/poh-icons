@@ -14,7 +14,6 @@
   "scripts": {
     "patch": "npm version patch && git push && npm publish",
     "icons:create": "npx @svgr/cli -d ./svg ./src --config-file ./svgr-config.json --template ./svg-template.js --svgo-config ./svgo-config.json",
-    "build:rename": "renamer --find '/^/' --replace Icon ./svg/*.js"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
