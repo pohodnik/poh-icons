@@ -1,3 +1,6 @@
 svg
 node_modules
 .idea
+svg_as_jsx
+demo
+build

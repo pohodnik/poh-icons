@@ -5,3 +5,5 @@ src
 svg-template.js
 svgo-config.json
 svgr-config.json
+svg_as_jsx
+demo

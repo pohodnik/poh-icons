@@ -1,15 +1,11 @@
 {
-  "typescript": false,
-  "removeViewBox": false,
+  "icon": true,
   "replaceAttrValues": {
     "white": "{props.color || `#FFFFFF`}",
     "#FFFFFF": "{props.color || `#FFFFFF`}",
     "black": "{props.color || `currentColor`}",
     "#111111": "{props.color || `currentColor`}",
-    "#000": "{props.color || `currentColor`}"
-  },
-  "svgProps": {
-    "width": "{props.width || 256}",
-    "height": "{props.height || 256}"
+    "#000": "{props.color || `currentColor`}",
+    "#212529": "{props.color || `currentColor`}"
   }
 }

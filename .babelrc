@@ -1,0 +1,7 @@
+{
+    "presets": [
+        "@pohodnik",
+        "@pohodnik/react",
+        "@babel/preset-typescript"
+    ]
+}

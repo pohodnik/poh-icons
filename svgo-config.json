@@ -1,3 +1,9 @@
 {
-  "multipass": true
+  "multipass": true,
+  "plugins": [
+    {
+      "name": "removeViewBox",
+      "active": false
+    }
+  ]
 }

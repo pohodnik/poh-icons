@@ -8,16 +8,36 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "@svgr/cli": "^6.5.1"
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.13.0",
+    "@pohodnik/babel-preset": "^2.0.12",
+    "@pohodnik/babel-preset-react": "^1.1.15",
+    "@svgr/cli": "^6.5.1",
+    "babel-loader": "^9.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "scripts": {
     "patch": "npm version patch && git push && npm publish",
-    "icons:create": "npx @svgr/cli --icon -d ./svg ./src --config-file ./svgr-config.json --template ./svg-template.js --svgo-config ./svgo-config.json"
+    "build:lib": "npx babel build --out-dir svg",
+    "build:svgr": "npx @svgr/cli --icon -d ./build ./src --config-file ./svgr-config.json --template ./svg-template.js --svgo-config ./svgo-config.json",
+    "build:types": "node scripts/build-types.js",
+    "build:registry": "node scripts/build-registry.js",
+    "build:demo": "webpack --mode=development",
+    "icons:create": "yarn build:svgr && yarn build:lib && yarn build:types && yarn build:registry && yarn build:demo"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
   "directories": {
     "lib": "./svg"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.18.6"
   }
 }
