@@ -33,38 +33,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: poh-icons
-          path: .
-  # Single deploy job since we're just deploying
-  static-site:
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artefact
-        uses: actions/download-artifact@v3
-        with:
-          name: poh-icons
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload entire repository
-          path: './demo'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
-  npm-package:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artefact
-        uses: actions/download-artifact@v3
-        with:
-          name: poh-icons
+          name: poh-icons-site
+          path: ./demo
       - name: Set git user for commit new version
         run: |
           git config --global user.name "Pohodnik NPM Publisher"
@@ -106,3 +76,25 @@ jobs:
             <code>yarn upgrade @pohodnik/pohodnik-icons --latest</code>
             <i>${{ github.event.head_commit.message }}</i>
             ${{ github.actor }}
+  # Single deploy job since we're just deploying
+  static-site:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artefact
+        uses: actions/download-artifact@v3
+        with:
+          name: poh-icons-site
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: './demo'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
