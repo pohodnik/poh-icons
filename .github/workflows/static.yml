@@ -21,11 +21,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,6 +30,14 @@ jobs:
         run: yarn
       - name: build
         run: yarn icons:create
+  # Single deploy job since we're just deploying
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
@@ -44,7 +48,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Set git user for commit new version
         run: |
           git config --global user.name "Pohodnik NPM Publisher"
