@@ -31,13 +31,15 @@ jobs:
       - name: build
         run: yarn icons:create
   # Single deploy job since we're just deploying
-  deploy:
+  static-site:
     needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
@@ -48,10 +50,12 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-  publish:
+  npm-package:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Set git user for commit new version
         run: |
           git config --global user.name "Pohodnik NPM Publisher"
