@@ -58,12 +58,12 @@ jobs:
       - name: Final version type ${{ env.NEWVER }}
         run: echo ${{ env.NEWVER }}
 
-      - name: Pushing new version to git
-        run: |
-          git push
-          git push --tags
-      - name: Prepare NPM
-        run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" >> ./.npmrc
+      # - name: Pushing new version to git
+      #   run: |
+      #     git push
+      #     git push --tags
+      # - name: Prepare NPM
+      #   run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" >> ./.npmrc
 
       - name: Publish npm package
         run: npm publish --access public
