@@ -31,7 +31,7 @@ jobs:
       - name: build
         run: yarn icons:create
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: poh-icons-site
           path: ./demo
@@ -85,7 +85,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download artefact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: poh-icons-site
       - name: Setup Pages
