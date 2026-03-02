@@ -4,3 +4,4 @@ node_modules
 svg_as_jsx
 demo
 build
+.DS_Store
