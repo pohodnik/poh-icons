@@ -62,8 +62,8 @@ jobs:
       #   run: |
       #     git push
       #     git push --tags
-      # - name: Prepare NPM
-      #   run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" >> ./.npmrc
+      - name: Prepare NPM
+        run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" >> ./.npmrc
 
       - name: Publish npm package
         run: npm publish --access public
