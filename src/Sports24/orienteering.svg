@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none" viewBox="0 0 25 24">
-  <path stroke="#0B0000" stroke-width="2" d="M3.235 9.917C4.725 8.785 7.147 6.71 8.451 6.52c1.304-.189 2.631.943 2.794 1.51.163.565-1.28 2.452-1.28 4.15 0 1.698 3.143 3.584 3.515 4.716.373 1.132 0 5.66 0 6.603m-5.029-8.49c-.745.944-1.49 2.076-2.794 2.453H1M13.853 7.087c.186 1.132 1.304 3.584 1.676 4.15.745.755 2.608.566 4.471.566"/>
-  <circle cx="13.5" cy="3" r="1.5" stroke="#0B0000" stroke-width="2"/>
-  <path stroke="#000" stroke-width="2" d="M18.125 2h4.75v4.75h-4.75z"/>
-  <path fill="#010000" d="M22.75 2.313 23.125 7l-4.688-.375 4.313-4.312Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" viewBox="0 0 25 25">
+  <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M3.235 9.917C4.725 8.785 7.147 6.71 8.451 6.52c1.304-.189 2.631.943 2.794 1.51.163.565-1.28 2.452-1.28 4.15 0 1.698 3.143 3.584 3.515 4.716.373 1.132 0 5.66 0 6.603m-5.029-8.49c-.745.944-1.49 2.076-2.794 2.453H1M13.853 7.087c.186 1.132 1.304 3.584 1.676 4.15.745.755 2.608.566 4.471.566"/>
+  <circle cx="13.5" cy="3" r="1.5" stroke="currentColor" stroke-linecap="round" stroke-width="2"/>
+  <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M18.125 2h4.75v4.75h-4.75z"/>
+  <path fill="currentColor" d="M22.75 2.313 23.125 7l-4.688-.375 4.313-4.312Z"/>
 </svg>

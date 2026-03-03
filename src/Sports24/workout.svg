@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <path stroke="#0B0000" stroke-width="2" d="M5.341 3.696c0 2.353 2.126 6.47 3.48 7.059 1.352.588 2.617.784 2.898 1.764.282.98 0 1.373 0 3.138 0 1.764 5.219 0 5.605 1.176.387 1.177 0 6.667 0 6.667m-7.537-7.255h-2.32c-1.546 0-.773 7.255-.773 7.255m7.151-12.745c1.74 0 3.48-1.177 3.48-1.177s.966-3.921.966-5.882M.509 3.5h23"/>
-  <circle cx="12.009" cy="8" r="1.5" stroke="#0B0000" stroke-width="2"/>
-  <path stroke="#000" stroke-width="2" d="M2.51.5v6m19-6v6"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" viewBox="0 0 25 25">
+  <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5.832 4.196c0 2.353 2.126 6.47 3.479 7.059 1.353.588 2.617.784 2.9 1.765.281.98 0 1.372 0 3.137s5.218 0 5.604 1.176c.387 1.177 0 6.667 0 6.667m-7.538-7.255H7.958c-1.546 0-.773 7.255-.773 7.255m7.151-12.745c1.74 0 3.48-1.177 3.48-1.177s.966-3.921.966-5.882M1 4h23"/>
+  <circle cx="12.5" cy="8.5" r="1.5" stroke="currentColor" stroke-linecap="round" stroke-width="2"/>
+  <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M3 1v6m19-6v6"/>
 </svg>
